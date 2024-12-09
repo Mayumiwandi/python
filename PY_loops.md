@@ -169,6 +169,7 @@ for i in RYB_color:
 [Referensi ](https://cheatography.com/nouha-thabet/cheat-sheets/python-for-loops/pdf/?last=1576835940)
 
 ___
+___
 ### Perulangan `while`
 ***While*** Loops pada Python digunakan untuk mengeksekusi blok pernyataan berulang kali hingga kondisi tertentu *terpenuhi* **(perulangan akan terus dilakukan selama kondisi terpenuhi `True`)** . Jika kondisinya menjadi `False`, baris setelah loop dalam program akan dieksekusi.
 **Peringatan** 
@@ -245,6 +246,26 @@ else:
 **Penjelasan**
 -   Pada iterasi pertama hingga ketiga, nilai `i` adalah 1, 2, dan 3.
 -   Setelah nilai `i` menjadi 4, kondisi **`i < 4`** menjadi `False`, sehingga loop berhenti dan blok **`else`** dijalankan.
+
+
+#### The break
+`break` akan menghentikan perulangan.
+
+```py
+index = 0
+while True :
+	print("Berhasil menjalankan loop")
+	index += 1
+	if index == 5 :
+		break
+
+>>> Berhasil menjalankan loop
+>>> Berhasil menjalankan loop
+>>> Berhasil menjalankan loop
+>>> Berhasil menjalankan loop
+>>> Berhasil menjalankan loop
+```
+
 
 [Referensi ](https://cheatography.com/nouha-thabet/cheat-sheets/python-while-loops/pdf/?last=1576829684)
 ___
