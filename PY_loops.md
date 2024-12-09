@@ -6,18 +6,19 @@ You may obtain a copy of the License at:
     https://opensource.org/licenses/MIT
     https://github.com/Mayumiwandi -->
 
+
 ## **Python Loops**
 
 Perulangan dalam bahasa pemrograman berfungsi menyuruh komputer melakukan sesuatu secara berulang-ulang. Terdapat dua jenis perulangan dalam bahasa pemrograman python, yaitu perulangan dengan `for` dan `while`.
 
 ### Perulangan `for`
-Perulangan `for` digunakan untuk mengulang suatu rangkaian ***(bisa berupa List, Tupel, dictio­nary, set, atau string).***
+Perulangan `for` digunakan untuk mengulang suatu rangkaian ***(bisa berupa List, Tupel, dictio­nary, set, atau string).***  Digunakan ketika jumlah iterasi diketahui sebelumnya. 
 
 ####  For Loop - String
 
 ```py
 for i in  "­Col­or":  
-	­ ­ ­ print(i) 
+	print(i) 
 
 >>> C  
 >>> o  
@@ -31,7 +32,7 @@ for i in  "­Col­or":
 iterasi dilakukan berdasarkan ***kunci (key)*** dalam dictionary tersebut.
 ```py
 Car = {
-		"brand": "Ford",
+	"brand": "Ford",
     	"model": "Focus",
     	"year": 2013
     	}
@@ -46,10 +47,10 @@ for i in Car:
 iterasi dilakukan berdasarkan ***nilai (value)*** dalam dictionary tersebut.
 ```py
 Car = {
-	    "brand": "Ford",
-		"model": "Focus",
-		"year": 2013
-		}
+	"brand": "Ford",
+	"model": "Focus",
+	"year": 2013
+	}
 for i in Car:
 	print(Car[i])
 
@@ -61,7 +62,7 @@ for i in Car:
 ```py
 RYB_color = ("Red","Yellow","Blue")
 for i in RYB_color:
-		print(i)
+	print(i)
 		
 >>> Red
 >>> Yellow
@@ -71,7 +72,7 @@ for i in RYB_color:
 ```py
 RYB_color = ["Red","Yellow","Blue"]
 for i in RYB_color:
-		print(i)
+	print(i)
 		
 >>> Red
 >>> Yellow
@@ -166,3 +167,92 @@ for i in RYB_color:
 	pass
 ```
 [Referensi ](https://cheatography.com/nouha-thabet/cheat-sheets/python-for-loops/pdf/?last=1576835940)
+
+___
+### Perulangan `while`
+***While*** Loops pada Python digunakan untuk mengeksekusi blok pernyataan berulang kali hingga kondisi tertentu *terpenuhi* **(perulangan akan terus dilakukan selama kondisi terpenuhi `True`)** . Jika kondisinya menjadi `False`, baris setelah loop dalam program akan dieksekusi.
+**Peringatan** 
+Jika kondisi dalam **`while`** tidak pernah menjadi **`False`**, maka loop akan berjalan terus-menerus (infinite loop).
+
+####  Example `while`
+Dengan **while loop**, kita dapat mengeksekusi sekumpulan pernyataan selama kondisinya bernilai benar (**true**). Dalam contoh ini, kondisinya adalah bahwa **i** harus kurang dari 4.
+```py
+i = 1
+while i < 4:
+print(i)
+	i += 1
+	
+>>> 1
+>>> 2
+```
+#### The break Statement
+Dengan pernyataan **break**, kita dapat menghentikan loop meskipun kondisi **while** masih bernilai benar (**true**). Dalam contoh ini, loop berhenti ketika **i** sama dengan 2.
+```py
+i = 1
+while i < 4:
+	print(i)
+	if (i == 2):
+		break
+	i += 1
+	
+>>> 1
+```
+#### The continue Statement
+Dengan pernyataan **continue**, kita dapat menghentikan iterasi saat ini dan melanjutkan ke iterasi berikutnya. Dalam contoh ini, loop melewati iterasi ketika **i** sama dengan 2 dan melanjutkan ke iterasi selanjutnya.
+```py
+i = 1
+while i < 4:
+	print(i)
+	if (i == 2):
+		continue
+	i += 1
+	
+>>> 1
+>>> 2
+>>> 2
+>>> 2
+>>> 2
+>>> Infinite Loop
+```
+```py
+i = 1
+while i < 4:
+    print(i)
+    if (i == 2):
+        i += 1  # Tambahkan ini sebelum continue untuk menghindari Infinite Loop seperti di atas. 
+        continue
+    i += 1
+
+>>> 1
+>>> 2
+>>> 3
+```
+#### The else Statement
+Dengan pernyataan **else**, kita dapat menjalankan sebuah blok kode sekali saja ketika kondisi **while** tidak lagi bernilai benar (**True**).
+```py
+i = 1
+while i < 4:
+    print(i)
+    i += 1
+else:
+    print("i is no longer less than 4")
+
+>>> 1
+>>> 2
+>>> 3
+>>> i is no longer less than 4
+```
+**Penjelasan**
+-   Pada iterasi pertama hingga ketiga, nilai `i` adalah 1, 2, dan 3.
+-   Setelah nilai `i` menjadi 4, kondisi **`i < 4`** menjadi `False`, sehingga loop berhenti dan blok **`else`** dijalankan.
+
+[Referensi ](https://cheatography.com/nouha-thabet/cheat-sheets/python-while-loops/pdf/?last=1576829684)
+___
+
+<!-- Copyright (c) 2024 Yumi. All Rights Reserved.
+
+This project is licensed under the MIT License.
+You may obtain a copy of the License at:
+
+    https://opensource.org/licenses/MIT
+    https://github.com/Mayumiwandi -->
