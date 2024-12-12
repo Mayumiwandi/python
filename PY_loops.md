@@ -270,6 +270,170 @@ while True :
 [Referensi ](https://cheatography.com/nouha-thabet/cheat-sheets/python-while-loops/pdf/?last=1576829684)
 ___
 
+### Advanced `For` Loops
+
+```py
+kata = "abcdefghij"
+for item in enumerate(kata):
+    print(item)
+
+>>> (0, 'a')
+>>> (1, 'b')
+>>> (2, 'c')
+>>> (3, 'd')
+>>> (4, 'e')
+>>> (5, 'f')
+>>> (6, 'g')
+>>> (7, 'h')
+>>> (8, 'i')
+>>> (9, 'j')
+```
+```py
+kata = "abcdefghij"
+for a,b in enumerate(kata):
+    print(a)
+    print(b)
+
+>>> 0
+>>> a
+>>> 1
+>>> b
+>>> 2
+>>> c
+>>> 3
+>>> d
+>>> 4
+>>> e
+>>> 5
+>>> f
+>>> 6
+>>> g
+>>> 7
+>>> h
+>>> 8
+>>> i
+>>> 9
+>>> j
+
+
+```
+```py
+
+angka = [1, 2, 3, 4, 5, 6, 7]
+huruf = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+
+for item in zip(angka, huruf):
+    print(item)  # Ini sudah benar
+
+>>> (1, 'a')
+>>> (2, 'b')
+>>> (3, 'c')
+>>> (4, 'd')
+>>> (5, 'e')
+>>> (6, 'f')
+>>> (7, 'g')
+```
+```py
+yumo = 'y' in 'yumi suka python'
+print(yumo)
+
+>>> True
+```
+```py
+
+kotak = {
+    'a':'batu',
+    'b':'kursi',
+    'c':'kipas'
+}
+cek = 'b' in kotak
+print(cek)
+
+cek2 = 'kursi' in kotak
+print(cek2)
+
+>>> True
+>>> False
+```
+```py
+angka = list(range(1, 11))
+print(angka)
+
+>>> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+```py
+isi = list()
+for item in range(1,11):
+    isi.append(item)
+    
+print(isi)
+
+>>> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+```py
+
+isi = [item for item in range(1,16)]
+
+print(isi)
+
+>>> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+```
+```py
+isi = [item**2 for item in range(1,11)]
+
+print(isi)
+
+>>> [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+```
+```py
+isi = [(item**2)/2 for item in range(1,11)]
+# bisa gunakan aritmatika
+print(isi)
+>>> [0.5, 2.0, 4.5, 8.0, 12.5, 18.0, 24.5, 32.0, 40.5, 50.0]
+```
+```py
+isi = [item for item in range(1,11) if item%2==0]
+# menampilkan nilai genap
+print(isi)
+>>> [2, 4, 6, 8, 10]
+```
+```py
+isi = [item**2 for item in range(1,41) if item%2==0]
+# angka dari 1 - 40 di pangkat 2 di modulus 2 
+print(isi)
+>>> [4, 16, 36, 64, 100, 144, 196, 256, 324, 400, 484, 576, 676, 784, 900, 1024, 1156, 1296, 1444, 1600]
+```
+```py
+isi = [item if item%2==0 else 'angka ini bilangan ganjil' for item in range(1,11)]
+print (isi)
+
+>>> ['angka ini bilangan ganjil', 2, 'angka ini bilangan ganjil', 4, 'angka ini bilangan ganjil', 6, 'angka ini bilangan ganjil', 8, 'angka ini bilangan ganjil', 10]
+```
+```py
+isi = []
+for item in range(1,11):
+    if item%2==0 :
+        isi.append(item)
+    else:
+        isi.append('angka ini bilangan ganjil')
+for i in isi:
+    print (f'\t{i}')
+
+
+>>> angka ini bilangan ganjil
+>>> 2
+>>> angka ini bilangan ganjil
+>>> 4        
+>>> angka ini bilangan ganjil
+>>> 6
+>>> angka ini bilangan ganjil
+>>> 8
+>>> angka ini bilangan ganjil
+>>> 10
+```
+[Referensi ](https://youtu.be/GSL6m4eE12I?si=LVCptEzYyNu7VGQj)
+___
+
 <!-- Copyright (c) 2024 Yumi. All Rights Reserved.
 
 This project is licensed under the MIT License.
