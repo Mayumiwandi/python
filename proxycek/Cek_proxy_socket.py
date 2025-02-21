@@ -3,7 +3,7 @@ import concurrent.futures
 import time
 import sys
 
-PROXY_FILE = "/home/acer/mayumi/Experimen/labs-python/Proxy/rawProxyList.txt"
+PROXY_FILE = "proxycek/rawProxyList.txt"
 ACTIVE_FILE = "proxycek/active.txt"
 DEAD_FILE = "proxycek/dead.txt"
 
