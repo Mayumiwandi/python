@@ -23,7 +23,7 @@ jobs:
     - name: 📦 Install Dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests beautifulsoup4
+        pip install requests beautifulsoup4 pysocks
         
     
     - name: 🔄 Update Proxy Status
