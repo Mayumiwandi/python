@@ -28,7 +28,7 @@ jobs:
     
     - name: 🔄 Update Proxy Status
       run: |
-        python3 ./Crawler/Crawler_ASN.py
+        python3 ./proxycek/Cek_proxy_socket.py
 
     #Commit dan push perubahan jika ada
     - name: 📤 Commit and Push Changes
